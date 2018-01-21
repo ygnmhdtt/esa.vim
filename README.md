@@ -37,6 +37,7 @@ esa.vimは `ESA_TEAM` と `ESA_AUTH` の環境変数を必要とします。
 ```
 $ echo 'export ESA_TEAM="exampleteam"' >> ~/.bash_profile
 $ echo 'export ESA_AUTH="Bearer 1234567890abcdef1234567890"' >> ~/.bash_profile
+$ source ~/.bash_profile
 ```
 
 ### esayari
