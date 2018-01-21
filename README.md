@@ -1,7 +1,7 @@
 # WIP esa.vim - post esa.io from vim 
 
-esa.vimはvim上からesa.ioに投稿できるvimプラグインです。
-投稿以外のことはできません。
+esa.vimはvim上からesa.ioに投稿できるvimプラグインです。  
+投稿以外のことはできません。  
 **esa.io公式プラグインではありません。[esa.io Web-API](https://docs.esa.io/posts/102)を利用しています。**
 
 ## 🐦 デモ
@@ -24,9 +24,9 @@ esa.vimを使用するには、以下の準備が必要です。
 * [peco](https://github.com/peco/peco)のインストール
 
 ### 環境変数
-esa.vimは `ESA_TEAM` と `ESA_AUTH` の環境変数を必要とします。
-`ESA_TEAM` は組織名です。
-アクセスURLの `https://[組織名].esa.io` の部分です。
+esa.vimは `ESA_TEAM` と `ESA_AUTH` の環境変数を必要とします。  
+`ESA_TEAM` は組織名です。  
+アクセスURLの `https://[組織名].esa.io` の部分です。  
 
 `ESA_AUTH` は[こちら](https://docs.esa.io/posts/102#3-0-0)を参考に取得するか、  
 `https://[組織名].esa.io/user/applications` の `Personal access tokens` より取得してください。  
@@ -40,13 +40,22 @@ $ echo 'export ESA_AUTH="Bearer 1234567890abcdef1234567890"' >> ~/.bash_profile
 ```
 
 ### esayari
-esa.vimは記事カテゴリの取得に[esayari](https://github.com/ygnmhdtt/esayari)を利用しています。
+esa.vimは記事カテゴリの取得に[esayari](https://github.com/ygnmhdtt/esayari)を利用しています。   
 
-#### esayariの配布方法記載
+以下のようにインストールしてください。
+
+```
+$ go get github.com/ygnmhdtt/esayari
+```
+
+```
+$ esayari
+```
+を実行した際に、カテゴリ一覧が出力されるのを確認してください。
 
 ### peco
-esa.vimは記事カテゴリの選択に[peco](https://github.com/peco/peco)を利用しています。
-[こちら](https://qiita.com/lestrrat/items/de8565fe32864f76ac19)などを参考にインストールしてください。
+esa.vimは記事カテゴリの選択に[peco](https://github.com/peco/peco)を利用しています。  
+[こちら](https://qiita.com/lestrrat/items/de8565fe32864f76ac19)などを参考にインストールしてください。  
 
 ## installation
 vimプラグインマネージャに[Plug-vim](https://github.com/junegunn/vim-plug)を利用している場合:
@@ -63,6 +72,19 @@ Plug 'ygnmhdtt/esa.vim'
 ```
 
 その他のプラグインマネージャを利用されている方は、各プラグインマネージャの使い方に則ってください。
+
+## usage
+
+vimで編集中に、
+
+```
+:Esa xxxの修正方針について
+```
+
+のようにコマンドを実行してください。  
+`:Esa` の引数に記事タイトルを渡す必要があります。  
+
+その後、カテゴリを選択してください。  
 
 ## contributing
 
