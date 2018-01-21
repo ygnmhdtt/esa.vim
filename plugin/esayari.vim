@@ -18,6 +18,5 @@ function! PostEsa(title)
   " TODO: refactor
   let curl = 'curl -XPOST -H ' . auth . ' -H ' . cont . " -d '" . body . "' " . url
   let res = system(curl)
-  echo res
 endfunction
 
