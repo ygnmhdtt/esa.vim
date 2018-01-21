@@ -46,13 +46,15 @@ esa.vimは記事カテゴリの取得に[esayari](https://github.com/ygnmhdtt/es
 以下のようにインストールしてください。
 
 ```
-$ go get github.com/ygnmhdtt/esayari
+$ go get github.com/ygnmhdtt/esayari/cmd/esayari
 ```
 
 ```
 $ esayari
 ```
+
 を実行した際に、カテゴリ一覧が出力されるのを確認してください。
+`Command not found` になる場合は、PATHに `$GOPATH/bin` を追加するとたぶんいけます。
 
 ### peco
 esa.vimは記事カテゴリの選択に[peco](https://github.com/peco/peco)を利用しています。  
